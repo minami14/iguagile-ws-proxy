@@ -35,7 +35,7 @@ func (p *Proxy) Start(address string) error {
 
 // Server is iguagile-engine server.
 type Server struct {
-	Host string `json:"host"`
+	Host string `json:"server"`
 	Port int32  `json:"port"`
 }
 
