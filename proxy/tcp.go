@@ -133,7 +133,7 @@ func (t *tcpClient) writeStart(ctx context.Context, ws *websocket.Conn) error {
 
 			switch mt {
 			case websocket.PingMessage:
-				if err := ws.WriteMessage(mt, message); err != nil {
+				if err := ws.WriteMessage(websocket.PongMessage, message); err != nil {
 					return err
 				}
 			case websocket.CloseMessage:
